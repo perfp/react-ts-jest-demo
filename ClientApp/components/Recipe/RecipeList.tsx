@@ -8,7 +8,7 @@ export class RecipeList extends React.Component<RecipeListState, RecipeListState
         let recipes : RecipeState[] = this.props.recipes;
 
         return (
-            <div>
+            <div className="col-lg-6">
                 {
                     recipes.map((recipe : RecipeState, index: number) => (
                         <Recipe recipe={recipe} key={index}/>

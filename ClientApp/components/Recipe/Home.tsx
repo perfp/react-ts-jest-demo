@@ -65,9 +65,11 @@ export default class Home extends React.Component<RecipeAppState, RecipeEditStat
             <div>
                 <h1>Recipes</h1>
                 <div className="container">
-                    <div className="row">                        
-                        <input type="text" className="input-lg col-sm-6" />
-                        <button type="submit" className="input-lg">Search </button>
+                    <div className="row">     
+                        <div className="col-lg-6">                   
+                            <input type="text" className="input-lg" />
+                            <button type="submit" className="input-lg">Search </button>
+                        </div>
                     </div>
                     <div className="row">
                         <h2>Top 10 recipes</h2>
@@ -79,14 +81,20 @@ export default class Home extends React.Component<RecipeAppState, RecipeEditStat
                             <button className="input-lg add" onClick={this.addRecipe}>Add recipe</button>
                         
                     ) : (
-                        <form className="form-horizontal" onSubmit={this.saveRecipe}>
-                            <label htmlFor="name" className="control-label col-sm-2">Name</label>
-                            <input type="text" name="name" ref="recipename" className="form-control input-lg" onChange={this.onChange} />
-                            <button type="submit" className="input-lg">Save</button>
+                        <div>
+                            <h2> Add recipe </h2>
+                            <div className="col-lg-6">
+                                <form onSubmit={this.saveRecipe}>
+                                    
+                                    <div className="form-group">
+                                        <label htmlFor="name">Name</label>    
+                                            <input type="text" name="name" ref="recipename" className="input-lg form-control" onChange={this.onChange} />
+                                    </div>
+                                    <button type="submit" className="input-lg">Save</button>
 
-                        </form>
-                            
-                        
+                                </form>
+                            </div>
+                        </div>
                     )}
                     </div>
                 </div>

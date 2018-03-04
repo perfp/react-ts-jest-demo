@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {test} from 'jest';
 import {shallow} from 'enzyme';
 import Home from './Home';
 
